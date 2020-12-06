@@ -2,8 +2,8 @@
 
 function maxDigit(n){
 
-    let a = n.toString();
-    let b = a.split('');
+    const a = n.toString();
+    const b = a.split('');
 
     return Math.max.apply(null, b);
   }
@@ -11,25 +11,20 @@ function maxDigit(n){
 
 //Створити функцію, яка форматує ім'я, роблячи першу букву великою.
 
-let name = 'jekiCH';
+const name = 'jekiCH';
 
-function capitalize(name) {
-    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-}
+const capitalize = name => name[0].toUpperCase() + name.slice(1).toLowerCase();
+
 console.log(capitalize(name));
 
 
 //Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M
 
-function random(min, max) {
-    let rand = min + Math.random() * (max + 1 - min);
-    return Math.floor(rand);
-  }
-
-  console.log(random(1,10));
+const getRandomNumber = (min, max) => Math.floor((Math.random() * (max - min) + min));
+  console.log(getRandomNumber(1,10));
 
   //Створити функцію, яка рахує скільки разів певна буква повторюється в слові
-let str = 'bababafdsf';
+const str = 'bababafdsf';
 function countLatter(str, char) {
     return str.split(char).length - 1;
 }
@@ -39,10 +34,10 @@ console.log(countLatter(str, 'f'));
 
 //Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу.
 
-let s = 'бісквіт був дуже ніжним';
+const s = 'бісквіт був дуже ніжним';
 
 function deleteDuplicateLetter (s) {
-    let result = '';
+  let result = '';
     for (let i = 0; i < s.length; i++) {
       if (s.lastIndexOf(s[i]) == s.indexOf(s[i])) {
         result += s[i];
