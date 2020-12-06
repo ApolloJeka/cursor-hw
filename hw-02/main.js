@@ -1,11 +1,11 @@
-let numberOne = +prompt ('Enter number ONE!');
-let numberTwo = +prompt ('Enter number TWO!');
+let numberOne = +prompt ('Введіть перше число');
+let numberTwo = +prompt ('Введіть друге число');
 let sum = 0;
 
 while (true) {
     numberOne = Math.trunc(numberOne);
     if(isNaN(numberOne)){
-        numberOne = +prompt('Enter a integer');
+        numberOne = +prompt('Данні повинні бути числом');
         continue;
     }
     break;
@@ -15,11 +15,11 @@ while (true) {
 while (true) {
     numberTwo = Math.trunc(numberTwo);
     if(isNaN(numberTwo)) {
-      numberTwo = +prompt('Enter a integer');
+      numberTwo = +prompt('Данні повинні бути числом');
         continue;
     }
     if(numberTwo <= numberOne){
-        numberTwo = +prompt('1st number must be bigger');
+        numberTwo = +prompt('Перше число повинно бути більше');
         continue;
     }
     break;
@@ -28,9 +28,9 @@ while (true) {
 
 // Чи можна якось написати перевірку на число для обох значеннь в одному й тому ж циклі?
 
-const evenNumbers = confirm('skip even numbers?');
+const evenNumbers = confirm('Пропускти парні числа?');
     for (let i = numberOne; i <= numberTwo; i++) {
-        if (i % 2 === 0 && evenNumbers === false || i % 2 === 1){
+        if (i % 2 === 0 && !evenNumbers || i % 2 === 1){
             sum += i;
         }
     }
