@@ -1,16 +1,16 @@
-const water = 15.678;
-const whisky = 123.965;
-const coffe = 90.2345;
-const amount = 500;
+const WATER = 15.678;
+const WHISKY = 123.965;
+const COFFE= 90.2345;
+const AMOUNT = 500;
 const random = (Math.random() * 100).toFixed();
 
 
 
-console.log(Math.max(water,whisky,coffe));
-console.log(Math.min(water,whisky,coffe));
-const sumDrinks = water + whisky + coffe;
+console.log(Math.max(WATER,WHISKY,COFFE));
+console.log(Math.min(WATER,WHISKY,COFFE));
+const sumDrinks = WATER + WHISKY + COFFE;
 console.log(sumDrinks);
-const sumRound = Math.floor(water) + Math.floor(whisky) + Math.floor(coffe);
+const sumRound = Math.floor(WATER) + Math.floor(WHISKY) + Math.floor(COFFE);
 console.log(sumRound);
 console.log(Math.ceil(sumRound/100)*100);
 console.log(sumRound % 2 === 0);
