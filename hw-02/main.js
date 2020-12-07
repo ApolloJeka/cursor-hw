@@ -1,32 +1,20 @@
-let numberOne = +prompt ('Введіть перше число');
-let numberTwo = +prompt ('Введіть друге число');
+let numberOne = +prompt ('Введіть число від якого ми будемо складати');
+
 let sum = 0;
 
-while (true) {
-    numberOne = Math.trunc(numberOne);
-    if(isNaN(numberOne)){
-        numberOne = +prompt('Данні повинні бути числом');
-        continue;
-    }
-    break;
+while (!Number.isInteger(numberOne) || !numberOne) {
+       numberOne = +prompt('Данні повинні бути числом');
 }
 
+let numberTwo = +prompt ('Введіть число до якого ми будемо складати');
 
-while (true) {
-    numberTwo = Math.trunc(numberTwo);
-    if(isNaN(numberTwo)) {
-      numberTwo = +prompt('Данні повинні бути числом');
-        continue;
+while (!Number.isInteger(numberTwo) || !numberTwo) {
+    numberTwo = +prompt('Данні повинні бути числом');
     }
     if(numberTwo <= numberOne){
-        numberTwo = +prompt('Перше число повинно бути більше');
-        continue;
-    }
-    break;
+        numberTwo = +prompt('Перше число повинно бути більшим');
+
 }
-
-
-// Чи можна якось написати перевірку на число для обох значеннь в одному й тому ж циклі?
 
 const evenNumbers = confirm('Пропускти парні числа?');
     for (let i = numberOne; i <= numberTwo; i++) {
