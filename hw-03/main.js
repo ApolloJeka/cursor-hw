@@ -1,13 +1,19 @@
 // Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі.
 
-function maxDigit(n){
+function getDigit(number){
 
-    const a = n.toString();
-    const b = a.split('');
-
-    return Math.max.apply(null, b);
+    let n = number;
+    let max = 0;
+      do {
+        if ( (n % 10) > max ) {
+          max = n % 10;
+        }
+        n = ( n - (n % 10)) / 10;
+      }
+        while ( n > 0) {}
+      return max;
   }
-  console.log(maxDigit(21439581354358));
+  console.log(getDigit(21439581354358));
 
 //Створити функцію, яка форматує ім'я, роблячи першу букву великою.
 
